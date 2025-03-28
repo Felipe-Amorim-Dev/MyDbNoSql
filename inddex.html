@@ -12,12 +12,30 @@
         <h1>My Database No SQL</h1>
     </header>
     <main>
-        <section class="container">
-            <div class="createDb mt-4">
-                <form id="nomeDb">
-                    <label class="form-label" for="campoNomeDb">Informe um nome para a collection</label>
-                    <input class="form-control" type="text" id="campoNomeDb" name="campoNomeDb" placeholder="Nome collection">
-                    <button class="btn btn-success mt-4" type="submit">
+        <section class="container d-flex flex-row justify-content-around align-items-center">
+            <div class="createCollection col-6 mt-4 me-4">
+                <form id="collection">
+                    <div>
+                        <label class="form-label" for="campoNomeCollection">Informe um nome da collection</label>
+                        <input class="form-control" type="text" id="campoNomeCollection" name="campoNomeCollection" placeholder="Nome collection">
+                    </div>
+
+                    <div class="mt-4">
+                        <label class="form-label" for="campoNomeTabela">Informe o nome da tabela</label>
+                        <input class="form-control" type="text" id="campoNomeTabela" name="campoNomeTabela" placeholder="Nome da tabela">
+                    </div>
+
+                    <button class="btn btn-success mt-4" id="newCampo">
+                        Adicionar campo                        
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-circle" viewBox="0 0 16 16">
+                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+                            <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"/>
+                          </svg>
+                    </button>
+
+                    <div class="camposTabela mt-4"></div>
+
+                    <button class="btn btn-primary mt-4" type="submit">
                         Criar Collection
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-circle" viewBox="0 0 16 16">
                             <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
@@ -26,10 +44,17 @@
                     </button>
                 </form>
             </div>
+
+            <div id="showCollections">
+                <h1 class="mb-4">Minhas Collections</h1>
+            </div>
         </section>
     </main>
 </body>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-<script src="/Database/Database.js"></script>
+<script src="/ScriptPage/campoTabela.js"></script>
+<script src="/Database/NewCollection.js"></script>
+<script src="/Database/MyCollections.js"></script>
+
 </html>
